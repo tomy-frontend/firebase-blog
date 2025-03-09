@@ -1,0 +1,25 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #cb8c54;
+  gap: 45px;
+  padding: 1rem;
+}
+
+nav a {
+  display: inline flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+@media (any-hover: hover) {
+  nav a:hover {
+    color: #9eb4f6;
+  }
+}

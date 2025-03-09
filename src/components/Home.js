@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
-      <h2>Home</h2>
-      <Link to="/login">ログインページへ</Link>
+      <h2>Homeだよ!</h2>
+      <Link to="/logout">ログアウト</Link>
     </>
   );
 };
