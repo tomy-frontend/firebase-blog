@@ -1,0 +1,64 @@
+.homePage {
+  width: 100%;
+  height: calc(100dvh - 80px);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.postContents {
+  width: 600px;
+  height: auto;
+  max-height: 600px;
+  border-radius: 17px;
+  background: #ffffff;
+  box-shadow: 8px 8px 30px #737373, -8px -8px 30px #ffffff;
+  padding: 20px;
+  margin-block: 20px;
+}
+
+.postHeader {
+  h1 {
+    text-align: center;
+  }
+}
+
+.postTextContainer {
+  width: 100%;
+  height: auto;
+}
+
+.nameAndDeleteButton {
+  display: flex;
+  align-items: center;
+
+  h3 {
+    flex: 90%;
+  }
+
+  button {
+    flex: 10%;
+    inline-size: 100%;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 8px 8px 30px #737373, -8px -8px 30px #ffffff;
+    outline: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    touch-action: manipulation;
+    user-select: none;
+    transition: all 0.3s ease;
+  }
+
+  @media (any-hover: hover) {
+    button:hover {
+      color: #fff;
+      background: #1c1c1c;
+    }
+  }
+}
