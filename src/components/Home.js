@@ -5,7 +5,6 @@ const Home = () => {
   return (
     <>
       <h2>Homeだよ!</h2>
-      <Link to="/logout">ログアウト</Link>
     </>
   );
 };

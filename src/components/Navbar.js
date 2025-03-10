@@ -4,8 +4,9 @@ import "./Navbar.css";
 import { FaHome } from "react-icons/fa";
 import { MdOutlineArticle } from "react-icons/md";
 import { CiLogin } from "react-icons/ci";
+import { CiLogout } from "react-icons/ci";
 
-const Navbar = () => {
+const Navbar = ({ isAuth }) => {
   return (
     <nav>
       <Link to="/">
@@ -18,10 +19,17 @@ const Navbar = () => {
         記事投稿
       </Link>
 
-      <Link to="/login">
-        <CiLogin />
-        ログイン
-      </Link>
+      {!isAuth ? (
+        <Link to="/login">
+          <CiLogin />
+          ログイン
+        </Link>
+      ) : (
+        <Link to="/logout">
+          <CiLogout />
+          ログアウト
+        </Link>
+      )}
     </nav>
   );
 };
