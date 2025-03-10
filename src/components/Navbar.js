@@ -14,21 +14,23 @@ const Navbar = ({ isAuth }) => {
         ホーム
       </Link>
 
-      <Link to="/createpost">
-        <MdOutlineArticle />
-        記事投稿
-      </Link>
-
       {!isAuth ? (
         <Link to="/login">
           <CiLogin />
           ログイン
         </Link>
       ) : (
-        <Link to="/logout">
-          <CiLogout />
-          ログアウト
-        </Link>
+        <>
+          <Link to="/createpost">
+            <MdOutlineArticle />
+            記事投稿
+          </Link>
+
+          <Link to="/logout">
+            <CiLogout />
+            ログアウト
+          </Link>
+        </>
       )}
     </nav>
   );
