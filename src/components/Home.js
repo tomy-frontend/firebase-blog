@@ -9,14 +9,18 @@ const Home = () => {
   // firebaseからデータを取得する(初回マウント時のみのため[])
   useEffect(() => {
     const getPosts = async () => {
-      const data = await getDocs(collection(db, "posts"));
+      try {
+        const data = await getDocs(collection(db, "posts"));
 
-      setPostList(
-        data.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
-        }))
-      );
+        setPostList(
+          data.docs.map((doc) => ({
+            ...doc.data(),
+            id: doc.id,
+          }))
+        );
+      } catch (e) {
+        console.log("データ取得中にエラーが発生しました。", e);
+      }
     };
 
     getPosts();
